@@ -1,34 +1,67 @@
 package sorcer.arithmetic.provider.impl;
 
 public class MonitorData {
-    private int param1;
-    private int param2;
+    private float heartRate;
+    private float bloodPressure;
+    private float bloodSugar;
+    private float caloriesBurned;
+    private float sleepDuration;
 
-    /**
-     * More params to be created by monitoring process
-     */
-    public MonitorData() {
-        this.param1 = 0;
-        this.param2 = 0;
+    public MonitorData(float heartRate, float bloodPressure, float bloodSugar, float caloriesBurned, float sleepDuration) {
+        this.heartRate = heartRate;
+        this.bloodPressure = bloodPressure;
+        this.bloodSugar = bloodSugar;
+        this.caloriesBurned = caloriesBurned;
+        this.sleepDuration = sleepDuration;
     }
 
-    public int getParam1() {
-        return param1;
+    public float getHeartRate() {
+        return heartRate;
     }
 
-    public int getParam2() {
-        return param2;
-    }
-
-    public void setParam1(int monitorParam1) {
-        if (monitorParam1 >= 0) {
-            this.param1 = monitorParam1;
+    public void setHeartRate(float heartRate) {
+        if(heartRate >= 0) {
+            this.heartRate = heartRate;
         }
     }
 
-    public void setParam2(int monitorParam2) {
-        if (monitorParam2 >= 0) {
-            this.param2 = monitorParam2;
+    public float getBloodPressure() {
+        return bloodPressure;
+    }
+
+    public void setBloodPressure(float bloodPressure) {
+        if(bloodPressure >= 0) {
+            this.bloodPressure = bloodPressure;
+        }
+    }
+
+    public float getBloodSugar() {
+        return bloodSugar;
+    }
+
+    public void setBloodSugar(float bloodSugar) {
+        if(bloodSugar >= 0) {
+            this.bloodSugar = bloodSugar;
+        }
+    }
+
+    public float getCaloriesBurned() {
+        return caloriesBurned;
+    }
+
+    public void setCaloriesBurned(float caloriesBurned) {
+        if(caloriesBurned >= 0) {
+            this.caloriesBurned = caloriesBurned;
+        }
+    }
+
+    public float getSleepDuration() {
+        return sleepDuration;
+    }
+
+    public void setSleepDuration(float sleepDuration) {
+        if(sleepDuration >= 0) {
+            this.sleepDuration = sleepDuration;
         }
     }
 }
