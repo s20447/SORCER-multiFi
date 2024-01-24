@@ -1,13 +1,13 @@
 package sorcer.arithmetic.provider.impl;
 
+import sorcer.arithmetic.provider.IMonitor;
 import sorcer.arithmetic.provider.impl.MonitorData;
-import sorcer.arithmetic.provider.ui.IMonitor;
 
 
-public class MonitorImpl implements IMonitor{
+public class MonitorImpl implements IMonitor {
 
     private final int DAY_COUNT = 7;
-    private final int CALORIE_TO_STEP_COEFF = 0.03;
+    private final float CALORIE_TO_STEP_COEFF = 0.03f;
 
     private int currentDay;
     private float [] dailyHeartRate;
@@ -45,7 +45,7 @@ public class MonitorImpl implements IMonitor{
     }
 
     public MonitorData getMonitorData() {
-        float dailyCalories = new float[DAY_COUNT];
+        float[] dailyCalories = new float[DAY_COUNT];
         for(int i = 0; i < dailySteps.length; i++) dailyCalories[i] = stepsToCalories(dailySteps[i]);
         return new MonitorData(getAverage(dailyHeartRate), getAverage(dailyBloodPressure), getAverage(dailyBloodSugar), getAverage(dailyCalories), getAverage(nightlySleepDuration));
     }

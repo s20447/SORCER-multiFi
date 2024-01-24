@@ -1,16 +1,19 @@
 package sorcer.arithmetic.provider.impl;
 
-public class PaymentsImpl implements Payments {
+import sorcer.arithmetic.provider.IPayment;
 
-    private final String paymentOption;
-    private final PaymentsImpl payments;
+import java.rmi.RemoteException;
+
+public class PaymentsImpl implements IPayment {
+
+    private String paymentOption;
 
     public PaymentsImpl() {
-        this.paymentOption = paymentOption;
+        this.paymentOption = "";
     }
 
     public void addPaymentOption(String  paymentOption) {
-        payments.setPaymentOption(paymentOption);
+        setPaymentOption(paymentOption);
     }
 
     public void pay() throws RemoteException {

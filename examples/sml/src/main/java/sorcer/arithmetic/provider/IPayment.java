@@ -6,7 +6,7 @@ import sorcer.arithmetic.provider.impl.ShoppingSupplier;
 
 import java.rmi.RemoteException;
 
-public interface Payments {
+public interface IPayment {
 
     public void addPaymentOption(String paymentOption) throws RemoteException;
 
