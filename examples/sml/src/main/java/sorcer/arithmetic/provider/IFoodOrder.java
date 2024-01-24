@@ -8,11 +8,9 @@ import java.rmi.RemoteException;
 
 public interface IFoodOrder {
 
-    public boolean createFoodPlan(MonitorData d) throws RemoteException;
+    public String[] createFoodPlan(MonitorData d) throws RemoteException;
 
-    public boolean creteShoppingList() throws RemoteException;
+    public ShoppingList creteShoppingList(String[] foodPlan) throws RemoteException;
 
-    public boolean chooseSupplier(ShoppingSupplier s) throws RemoteException;
-
-    public boolean orderItems(ShoppingList sl) throws RemoteException;
+    public float orderItems(ShoppingList sl) throws RemoteException;
 }
